@@ -5,49 +5,40 @@ import Gadget from "./Gadget";
 const Gadgets = () => {
 
     const [gadgets, setGadgets] = useState([]);
+    const [catGadgets, setCatGadgets] = useState([]);
 
     useEffect(()=> {
         fetch('data.json')
         .then(res => res.json())
-        .then(data=> setGadgets(data))
+        .then(data=> {
+            setGadgets(data);
+            setCatGadgets(data)})
     },[])
 
     const handleCategoryRender = category => {
-        if (category==='Smartphones') {
-            const phones = gadgets.filter(gadget=> gadget.category==='Smartphones')
-            setGadgets(phones);
-        } 
-        // else if(category==='Laptops'){
-            
-        // }
+        if (category==='All') {
+            setCatGadgets(gadgets)
+        } else {
+            const filtered = gadgets.filter(gadget=> gadget.category===category);//every time we're filtering data from gadget without changing it 
+            setCatGadgets(filtered)
+        }
     }
 
 
     return (
         <div className="mt-96">
-            {/* <h2 className="text-4xl font-semibold text-center">Browse the Best in Modern Gadgets</h2> */}
             <div className="flex w-full flex-col">
                 <div className="divider text-4xl font-semibold my-14 
                   before:bg-purple-600 after:bg-purple-600 
                   before:h-[2px] after:h-[2px] before:flex-1 after:flex-1">Browse the Best in Modern Gadgets</div>
             </div>
             <div className="flex relative">
-                {/* <div className="flex flex-col sticky border">
-                    <button>Smartphones</button>
-                    <button>Laptops</button>
-                    <button>Tablets</button>
-                    <button>Audio</button>
-                    <button>Wearables</button>
-                    <button>Drones</button>
-                    <button>Accessories</button>
-                    <button>VR</button>
-                </div> */}
                 <div className="drawer lg:drawer-open">
                     <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                     <div className="drawer-content grid grid-cols-3">
                         {/* Page content here */}
                         {
-                            gadgets.map(gadget=> <Gadget key={gadget.product_id} gadget={gadget}></Gadget>)
+                            catGadgets.map(gadget=> <Gadget key={gadget.product_id} gadget={gadget}></Gadget>)
                         }
                         <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">
                         Open drawer
@@ -58,30 +49,15 @@ const Gadgets = () => {
                         <ul className="menu rounded-2xl 
                         text-base-content min-h-full w-52 p-4 flex flex-col justify-center gap-6">
                         {/* Sidebar content here */}
-                            <button onClick={()=> handleCategoryRender('Smartphones')}
-                            className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">Smartphones</button>
-                            <button onClick={()=> handleCategoryRender('Laptops')}
-                            className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">Laptops</button>
-                            <button onClick={()=> handleCategoryRender('Tablets')}
-                            className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">Tablets</button>
-                            <button onClick={()=> handleCategoryRender('Audio')}
-                            className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">Audio</button>
-                            <button onClick={()=> handleCategoryRender('Wearables')}
-                            className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">Wearables</button>
-                            <button onClick={()=> handleCategoryRender('Drones')}
-                            className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">Drones</button>
-                            <button onClick={()=> handleCategoryRender('Accessories')}
-                            className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">Accessories</button>
-                            <button onClick={()=> handleCategoryRender('VR')}
-                            className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">VR</button>
+                            {['All', 'Smartphones', 'Laptops', 'Tablets', 'Audio', 'Wearables', 'Drones', 'Accessories', 'VR']
+                            .map(category => <button
+                            className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600"
+                            onClick={()=> handleCategoryRender(`${category}`)}
+                            >{category}</button>)
+                            }
                         </ul>
                     </div>
                 </div>
-                {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                    {
-                        gadgets.map(gadget=> <Gadget key={gadget.product_id} gadget={gadget}></Gadget>)
-                    }
-                </div> */}
             </div>
             
         </div>
