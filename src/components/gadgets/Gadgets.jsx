@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Gadget from "./Gadget";
 
 
 const Gadgets = () => {
@@ -13,9 +14,13 @@ const Gadgets = () => {
 
 
     return (
-        <div className="mt-96 h-[30rem]">
-            <h2 className="text-9xl">Gadgets: {gadgets.length}</h2>
-            
+        <div className="mt-96">
+            <h2 className="text-4xl font-semibold text-center">Browse the Best in Modern Gadgets</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                {
+                    gadgets.map(gadget=> <Gadget key={gadget.product_id} gadget={gadget}></Gadget>)
+                }
+            </div>
         </div>
     );
 };
