@@ -1,0 +1,258 @@
+[
+    {
+      "product_id": "P001",
+      "product_title": "Apple iPhone 15 Pro Max",
+      "product_image": "https://example.com/iphone15promax.jpg",
+      "category": "Smartphones",
+      "price": 1299,
+      "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+      "specification": [
+        "6.7-inch Super Retina XDR display",
+        "A17 Bionic chip",
+        "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultrawide)",
+        "LiDAR Scanner",
+        "Up to 2TB storage"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "P002",
+      "product_title": "Samsung Galaxy S24 Ultra",
+      "product_image": "https://example.com/galaxys24ultra.jpg",
+      "category": "Smartphones",
+      "price": 1199,
+      "description": "The new Samsung Galaxy S24 Ultra with revolutionary camera tech.",
+      "specification": [
+        "6.8-inch AMOLED 2X Display",
+        "Snapdragon 8 Gen 3",
+        "200MP Quad Camera",
+        "S-Pen support",
+        "5000mAh battery"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "P003",
+      "product_title": "Google Pixel 8 Pro",
+      "product_image": "https://example.com/pixel8pro.jpg",
+      "category": "Smartphones",
+      "price": 999,
+      "description": "Google’s best AI-powered camera phone.",
+      "specification": [
+        "6.7-inch LTPO OLED Display",
+        "Google Tensor G3",
+        "50MP main camera",
+        "Face Unlock",
+        "Android 14"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": "P004",
+      "product_title": "Apple MacBook Pro M3",
+      "product_image": "https://example.com/macbookprom3.jpg",
+      "category": "Laptops",
+      "price": 2399,
+      "description": "Ultimate power with the Apple M3 chip for professionals.",
+      "specification": [
+        "16-inch Liquid Retina XDR Display",
+        "Apple M3 Pro Chip",
+        "32GB RAM",
+        "1TB SSD",
+        "macOS Sonoma"
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": "P005",
+      "product_title": "Dell XPS 15",
+      "product_image": "https://example.com/dellxps15.jpg",
+      "category": "Laptops",
+      "price": 1899,
+      "description": "A powerhouse Windows laptop in a sleek design.",
+      "specification": [
+        "15.6-inch 4K OLED Display",
+        "Intel Core i9 13th Gen",
+        "32GB RAM",
+        "1TB SSD",
+        "NVIDIA RTX 4070"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "P006",
+      "product_title": "Apple iPad Pro 12.9 M2",
+      "product_image": "https://example.com/ipadpro12m2.jpg",
+      "category": "Tablets",
+      "price": 1099,
+      "description": "The most powerful iPad ever with M2 chip.",
+      "specification": [
+        "12.9-inch Liquid Retina XDR Display",
+        "M2 Chip",
+        "Apple Pencil 2 support",
+        "Up to 2TB storage",
+        "Face ID"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "P007",
+      "product_title": "Samsung Galaxy Tab S9 Ultra",
+      "product_image": "https://example.com/galaxytabs9ultra.jpg",
+      "category": "Tablets",
+      "price": 1199,
+      "description": "Samsung’s premium tablet with AMOLED display.",
+      "specification": [
+        "14.6-inch Dynamic AMOLED 2X",
+        "Snapdragon 8 Gen 2",
+        "S Pen included",
+        "Android 13",
+        "120Hz refresh rate"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "P008",
+      "product_title": "Sony WH-1000XM5 Headphones",
+      "product_image": "https://example.com/sonywh1000xm5.jpg",
+      "category": "Audio",
+      "price": 399,
+      "description": "Industry-leading noise cancellation headphones.",
+      "specification": [
+        "30-hour battery life",
+        "LDAC support",
+        "Touch controls",
+        "Quick charge",
+        "Multipoint connection"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "P009",
+      "product_title": "Apple Watch Series 9",
+      "product_image": "https://example.com/applewatch9.jpg",
+      "category": "Wearables",
+      "price": 399,
+      "description": "Smarter and faster with new health features.",
+      "specification": [
+        "Always-On Retina display",
+        "S9 SiP chip",
+        "Blood Oxygen and ECG apps",
+        "Fast charge",
+        "Swimproof design"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "P010",
+      "product_title": "Fitbit Charge 6",
+      "product_image": "https://example.com/fitbitcharge6.jpg",
+      "category": "Wearables",
+      "price": 149,
+      "description": "Advanced fitness tracking with heart health monitoring.",
+      "specification": [
+        "Built-in GPS",
+        "24/7 Heart Rate",
+        "Google Maps + Wallet",
+        "Up to 7-day battery",
+        "Water resistant"
+      ],
+      "availability": true,
+      "rating": 4.3
+    },
+    {
+      "product_id": "P011",
+      "product_title": "DJI Mini 4 Pro Drone",
+      "product_image": "https://example.com/djimini4pro.jpg",
+      "category": "Drones",
+      "price": 799,
+      "description": "Compact drone with 4K camera and obstacle sensing.",
+      "specification": [
+        "4K/60fps HDR Video",
+        "Omnidirectional Obstacle Sensing",
+        "34-min flight time",
+        "ActiveTrack 360",
+        "Under 249g"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "P012",
+      "product_title": "Logitech MX Master 3S",
+      "product_image": "https://example.com/logitechmx3s.jpg",
+      "category": "Accessories",
+      "price": 99,
+      "description": "Precision mouse with customizable buttons and silent clicks.",
+      "specification": [
+        "8K DPI sensor",
+        "Quiet click",
+        "MagSpeed scroll",
+        "Bluetooth and USB-C",
+        "Up to 70-day battery"
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": "P013",
+      "product_title": "Anker GaNPrime 120W Charger",
+      "product_image": "https://example.com/anker120w.jpg",
+      "category": "Accessories",
+      "price": 109,
+      "description": "High-speed charger with 3 ports for multiple devices.",
+      "specification": [
+        "120W GaN Technology",
+        "2 USB-C + 1 USB-A port",
+        "Foldable plug",
+        "Fast charging for MacBooks",
+        "Compact size"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": "P014",
+      "product_title": "Oculus Quest 3",
+      "product_image": "https://example.com/oculusquest3.jpg",
+      "category": "VR",
+      "price": 499,
+      "description": "Next-gen VR headset with full-color passthrough.",
+      "specification": [
+        "Meta Reality mixed-reality",
+        "High-res LCD panels",
+        "Wireless PC VR support",
+        "256GB storage",
+        "Touch Plus controllers"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "P015",
+      "product_title": "Razer Blade 16 Gaming Laptop",
+      "product_image": "https://example.com/razerblade16.jpg",
+      "category": "Laptops",
+      "price": 2999,
+      "description": "High-end gaming laptop with serious performance.",
+      "specification": [
+        "16-inch Dual-Mode Mini LED Display",
+        "Intel Core i9 HX",
+        "NVIDIA RTX 4090",
+        "32GB RAM",
+        "1TB SSD"
+      ],
+      "availability": false,
+      "rating": 4.5
+    }
+  ]
+  
