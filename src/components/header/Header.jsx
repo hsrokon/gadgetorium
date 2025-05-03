@@ -1,9 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
+import { useLocation } from 'react-router-dom';
 
 
 const Header = () => {
+
+    const location = useLocation();
+
 
     const links = <>
         <li><NavLink>Home</NavLink></li>
@@ -12,7 +16,7 @@ const Header = () => {
     </> 
 
     return (
-        <div className="navbar bg-base-100 shadow-xs">
+        <div className={`navbar bg-base-100 shadow-xs mt-4 ${location.key === 'default' ? 'bg-purple-600 text-white rounded-t-2xl' : ''}`}>
             <div className="navbar-start">
                 <div className="dropdown">
                 <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -31,7 +35,7 @@ const Header = () => {
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end flex gap-4">
+            <div className="navbar-end flex gap-4 mr-4">
                 <Link className="text-2xl"><IoCartOutline /></Link>
                 <Link className=""><FaRegHeart /></Link>
             </div>

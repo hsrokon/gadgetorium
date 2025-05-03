@@ -2,7 +2,7 @@
     {
       "product_id": "P001",
       "product_title": "Apple iPhone 15 Pro Max",
-      "product_image": "https://example.com/iphone15promax.jpg",
+      "product_image": "https://i.ibb.co.com/F43QVrn1/6198232-3174096.jpg",
       "category": "Smartphones",
       "price": 1299,
       "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
@@ -19,7 +19,7 @@
     {
       "product_id": "P002",
       "product_title": "Samsung Galaxy S24 Ultra",
-      "product_image": "https://example.com/galaxys24ultra.jpg",
+      "product_image": "https://i.ibb.co.com/Y7y9P3g6/samsung-s24-ultra.jpg",
       "category": "Smartphones",
       "price": 1199,
       "description": "The new Samsung Galaxy S24 Ultra with revolutionary camera tech.",
@@ -36,7 +36,7 @@
     {
       "product_id": "P003",
       "product_title": "Google Pixel 8 Pro",
-      "product_image": "https://example.com/pixel8pro.jpg",
+      "product_image": "https://i.ibb.co.com/fVdRRY0X/unnamed.jpg",
       "category": "Smartphones",
       "price": 999,
       "description": "Google’s best AI-powered camera phone.",
@@ -53,7 +53,7 @@
     {
       "product_id": "P004",
       "product_title": "Apple MacBook Pro M3",
-      "product_image": "https://example.com/macbookprom3.jpg",
+      "product_image": "https://i.ibb.co.com/XZqDD2GT/macbook-pro-m3.png",
       "category": "Laptops",
       "price": 2399,
       "description": "Ultimate power with the Apple M3 chip for professionals.",
@@ -70,7 +70,7 @@
     {
       "product_id": "P005",
       "product_title": "Dell XPS 15",
-      "product_image": "https://example.com/dellxps15.jpg",
+      "product_image": "https://i.ibb.co.com/cSbK4NRj/notebook-xps-15-9530-t-black-gallery-5.jpg",
       "category": "Laptops",
       "price": 1899,
       "description": "A powerhouse Windows laptop in a sleek design.",
@@ -87,7 +87,7 @@
     {
       "product_id": "P006",
       "product_title": "Apple iPad Pro 12.9 M2",
-      "product_image": "https://example.com/ipadpro12m2.jpg",
+      "product_image": "https://i.ibb.co.com/TjgyTs9/ipad-pro-13inch-6th-gen-wifi-spacegray-202409.jpg",
       "category": "Tablets",
       "price": 1099,
       "description": "The most powerful iPad ever with M2 chip.",
@@ -104,7 +104,7 @@
     {
       "product_id": "P007",
       "product_title": "Samsung Galaxy Tab S9 Ultra",
-      "product_image": "https://example.com/galaxytabs9ultra.jpg",
+      "product_image": "https://i.ibb.co.com/Q3n9GcsK/galaxy-tabs9ultra.jpg",
       "category": "Tablets",
       "price": 1199,
       "description": "Samsung’s premium tablet with AMOLED display.",
@@ -121,7 +121,7 @@
     {
       "product_id": "P008",
       "product_title": "Sony WH-1000XM5 Headphones",
-      "product_image": "https://example.com/sonywh1000xm5.jpg",
+      "product_image": "https://i.ibb.co.com/wZkJs5bn/sony.png",
       "category": "Audio",
       "price": 399,
       "description": "Industry-leading noise cancellation headphones.",
@@ -138,7 +138,7 @@
     {
       "product_id": "P009",
       "product_title": "Apple Watch Series 9",
-      "product_image": "https://example.com/applewatch9.jpg",
+      "product_image": "https://i.ibb.co.com/ksqVqcKX/Apple-Watch-Series-9-lt.jpg",
       "category": "Wearables",
       "price": 399,
       "description": "Smarter and faster with new health features.",
@@ -155,7 +155,7 @@
     {
       "product_id": "P010",
       "product_title": "Fitbit Charge 6",
-      "product_image": "https://example.com/fitbitcharge6.jpg",
+      "product_image": "https://i.ibb.co.com/CC8Mxgf/fitbit.jpg",
       "category": "Wearables",
       "price": 149,
       "description": "Advanced fitness tracking with heart health monitoring.",
@@ -172,7 +172,7 @@
     {
       "product_id": "P011",
       "product_title": "DJI Mini 4 Pro Drone",
-      "product_image": "https://example.com/djimini4pro.jpg",
+      "product_image": "https://i.ibb.co.com/qLp7Vbzk/dji-mini-4.jpg",
       "category": "Drones",
       "price": 799,
       "description": "Compact drone with 4K camera and obstacle sensing.",
@@ -189,7 +189,7 @@
     {
       "product_id": "P012",
       "product_title": "Logitech MX Master 3S",
-      "product_image": "https://example.com/logitechmx3s.jpg",
+      "product_image": "https://i.ibb.co.com/SDVdm637/logitech.png",
       "category": "Accessories",
       "price": 99,
       "description": "Precision mouse with customizable buttons and silent clicks.",
@@ -206,7 +206,7 @@
     {
       "product_id": "P013",
       "product_title": "Anker GaNPrime 120W Charger",
-      "product_image": "https://example.com/anker120w.jpg",
+      "product_image": "https://i.ibb.co.com/Dftxdj4B/Anker-737-Charger-Ga-NPrime-120-W-1-image.jpg",
       "category": "Accessories",
       "price": 109,
       "description": "High-speed charger with 3 ports for multiple devices.",
@@ -223,7 +223,7 @@
     {
       "product_id": "P014",
       "product_title": "Oculus Quest 3",
-      "product_image": "https://example.com/oculusquest3.jpg",
+      "product_image": "https://i.ibb.co.com/vxrHpN7Q/quest-3.png",
       "category": "VR",
       "price": 499,
       "description": "Next-gen VR headset with full-color passthrough.",
@@ -240,7 +240,7 @@
     {
       "product_id": "P015",
       "product_title": "Razer Blade 16 Gaming Laptop",
-      "product_image": "https://example.com/razerblade16.jpg",
+      "product_image": "https://i.ibb.co.com/v2rRsQd/Blade16-KV.jpg",
       "category": "Laptops",
       "price": 2999,
       "description": "High-end gaming laptop with serious performance.",

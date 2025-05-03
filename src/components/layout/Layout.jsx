@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Footer from '../footer/Footer';
 
 const Layout = () => {
+
     return (
         <div className='min-h-screen flex flex-col items-center'>
             <div className='w-11/12'>
