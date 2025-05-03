@@ -16,7 +16,9 @@ const Gadget = ({gadget}) => {
                 <h2 className="card-title">{product_title}</h2>
                 <p>{description}</p>
                 <div className="card-actions">
-                <button className="btn btn-primary">View details</button>
+                <button className="py-2 rounded-2xl btn btn-neutral btn-outline 
+                bg-purple-600 text-white border-purple-600 
+                hover:bg-white hover:text-purple-600 hover:shadow-base-100 ">View details</button>
                 </div>
             </div>
         </div>
