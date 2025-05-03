@@ -12,6 +12,16 @@ const Gadgets = () => {
         .then(data=> setGadgets(data))
     },[])
 
+    const handleCategoryRender = category => {
+        if (category==='Smartphones') {
+            const phones = gadgets.filter(gadget=> gadget.category==='Smartphones')
+            setGadgets(phones);
+        } 
+        // else if(category==='Laptops'){
+            
+        // }
+    }
+
 
     return (
         <div className="mt-96">
@@ -48,14 +58,22 @@ const Gadgets = () => {
                         <ul className="menu rounded-2xl 
                         text-base-content min-h-full w-52 p-4 flex flex-col justify-center gap-6">
                         {/* Sidebar content here */}
-                            <button className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">Smartphones</button>
-                            <button className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">Laptops</button>
-                            <button className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">Tablets</button>
-                            <button className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">Audio</button>
-                            <button className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">Wearables</button>
-                            <button className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">Drones</button>
-                            <button className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">Accessories</button>
-                            <button className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">VR</button>
+                            <button onClick={()=> handleCategoryRender('Smartphones')}
+                            className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">Smartphones</button>
+                            <button onClick={()=> handleCategoryRender('Laptops')}
+                            className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">Laptops</button>
+                            <button onClick={()=> handleCategoryRender('Tablets')}
+                            className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">Tablets</button>
+                            <button onClick={()=> handleCategoryRender('Audio')}
+                            className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">Audio</button>
+                            <button onClick={()=> handleCategoryRender('Wearables')}
+                            className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">Wearables</button>
+                            <button onClick={()=> handleCategoryRender('Drones')}
+                            className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">Drones</button>
+                            <button onClick={()=> handleCategoryRender('Accessories')}
+                            className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">Accessories</button>
+                            <button onClick={()=> handleCategoryRender('VR')}
+                            className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600">VR</button>
                         </ul>
                     </div>
                 </div>
