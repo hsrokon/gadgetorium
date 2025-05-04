@@ -24,6 +24,17 @@ const Gadgets = () => {
         }
     }
 
+    const handleSort = type => {
+        if (type==='price') {
+            const priceSorted = [...gadgets].sort((a, b) => a.price - b.price)
+            setCatGadgets(priceSorted)
+            
+        } else if(type==='rating'){
+            const ratingSorted = [...gadgets].sort((a, b) => a.rating - b.rating)
+            setCatGadgets(ratingSorted)
+        }
+    }
+
 
     return (
         <div className="mt-96">
@@ -49,6 +60,23 @@ const Gadgets = () => {
                         <ul className="menu rounded-2xl 
                         text-base-content min-h-full w-52 p-4 flex flex-col justify-center gap-6">
                         {/* Sidebar content here */}
+                            <div className="dropdown dropdown-center">
+                                <div tabIndex={0} role="button" 
+                                className="py-2 rounded-2xl btn btn-neutral btn-outline w-full hover:bg-purple-600 border-purple-600">Sort</div>
+                                <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                                    <button onClick={()=> handleSort('price')} 
+                                    className="my-1 hover:bg-slate-100 rounded-xl py-1">Sort by price</button>
+                                    <button onClick={()=> handleSort('rating')} 
+                                    className="my-1 hover:bg-slate-100 rounded-xl py-1">Sort by rating</button>
+                                </ul>
+                            </div>
+
+                            <div className="flex w-full flex-col">
+                                <div className="divider font-semibold 
+                                before:bg-purple-600 after:bg-purple-600 
+                                before:h-[2px] after:h-[2px] before:flex-1 after:flex-1">Category</div>
+                            </div>
+
                             {['All', 'Smartphones', 'Laptops', 'Tablets', 'Audio', 'Wearables', 'Drones', 'Accessories', 'VR']
                             .map(category => <button
                             className="py-2 rounded-2xl btn btn-neutral btn-outline hover:bg-purple-600 border-purple-600"
