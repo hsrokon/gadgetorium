@@ -5,7 +5,7 @@ const Gadget = ({gadget}) => {
     const {product_id, product_image, price, rating, product_title, description} = gadget;
 
     return (
-        <div className="card bg-base-100 w-full max-w-xs mx-auto shadow-sm">
+        <div className="card bg-base-100 w-full max-w-xs mx-auto shadow-sm h-[30rem]">
             <figure className="px-10 pt-8">
                 <img
                 src={product_image}
@@ -16,8 +16,8 @@ const Gadget = ({gadget}) => {
                 <h2 className="card-title">{product_title}</h2>
                 <p>{description}</p>
                 <div className="flex gap-2">
-                    <p>Price: {price}</p>
-                    <p>Rating: {rating}</p>
+                    <p>Price: <span className="font-semibold">{price}</span></p>
+                    <p>Rating: <span className="font-semibold">{rating}⭐</span></p>
                 </div>
                 <div className="card-actions">
                 <button className="py-2 rounded-2xl btn btn-neutral btn-outline 
