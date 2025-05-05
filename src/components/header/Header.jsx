@@ -8,7 +8,6 @@ const Header = () => {
 
     const location = useLocation();
 
-
     const links = <>
         <li><NavLink>Home</NavLink></li>
         <li><NavLink>Statistics</NavLink></li>
@@ -16,7 +15,7 @@ const Header = () => {
     </> 
 
     return (
-        <div className={`navbar bg-base-100 shadow-xs mt-4 ${location.key === 'default' ? 'bg-purple-600 text-white rounded-t-2xl' : ''}`}>
+        <div className={`navbar bg-base-100 shadow-xs mt-4 ${location.pathname === '/' ? 'bg-purple-600 text-white rounded-t-2xl' : ''}`}>
             <div className="navbar-start">
                 <div className="dropdown">
                 <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
