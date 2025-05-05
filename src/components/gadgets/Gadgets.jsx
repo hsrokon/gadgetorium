@@ -46,7 +46,7 @@ const Gadgets = () => {
             <div className="flex relative">
                 <div className="drawer lg:drawer-open">
                     <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                    <div className="drawer-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    <div className="drawer-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
                         {/* Page content here */}
                         {
                             catGadgets.map(gadget=> <Gadget key={gadget.product_id} gadget={gadget}></Gadget>)
