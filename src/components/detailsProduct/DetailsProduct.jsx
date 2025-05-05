@@ -1,7 +1,7 @@
 import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
-
+    import { useEffect, useRef } from "react";
 
 const DetailsProduct = () => {
 
@@ -15,6 +15,13 @@ const DetailsProduct = () => {
     const handleGoBack = ()=> {
         navigate(-1);
     }
+      
+    //scroll to details fixed
+    const detailsRef = useRef(null);  
+    useEffect(()=> {
+        detailsRef.current?.scrollIntoView({behavior: "smooth"});
+    }, []);
+
 
     return (
         <div className="relative mb-[35rem] lg:mb-[25rem]">
@@ -22,7 +29,7 @@ const DetailsProduct = () => {
                 <h2 className="text-3xl font-bold py-3">Products Details</h2>
                 <p className="text-xs md:text-sm w-11/12 md:w-9/12 lg:w-7/12 mx-auto">Discover everything you need to know about your next favorite gadget — from detailed specifications and features to pricing and availability. Make confident choices with all the insights in one place </p>
             </div>
-            <div className="hero w-11/12 lg:w-10/12 bg-base-200 min-h-auto lg:p-4 rounded-2xl lg:h-[40rem] text-sm lg:text-base
+            <div ref={detailsRef} className="hero scroll-mt-52 md:scroll-mt-32 w-11/12 lg:w-10/12 bg-base-200 min-h-auto lg:p-4 rounded-2xl lg:h-[40rem] text-sm lg:text-base
 
                     absolute left-1/2 transform -translate-x-1/2 -bottom-[37rem] md:-bottom-[34.5rem] lg:-bottom-[28rem]">
                 <div className="hero-content flex-col lg:flex-row">
