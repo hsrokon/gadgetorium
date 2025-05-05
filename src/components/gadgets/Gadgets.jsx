@@ -37,7 +37,7 @@ const Gadgets = () => {
 
 
     return (
-        <div className="mt-36 lg:mt-96">
+        <div id="products" className="mt-36 lg:mt-96">
             <div className="flex w-full flex-col">
                 <div className="divider text-xs md:text-xl lg:text-4xl font-semibold mt-6 mb-2 lg:my-14 
                   before:bg-purple-600 after:bg-purple-600 

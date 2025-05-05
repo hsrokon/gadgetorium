@@ -10,7 +10,7 @@ const Hero = () => {
                         <p className="py-6">
                         Explore the latest in technology, from cutting-edge smartphones to smart home gear. At Gadgetorium, innovation meets style - upgrade your tech today!
                         </p>
-                        <button className="btn btn-primary bg-white border-0 rounded-4xl text-purple-600">Shop now</button>
+                        <a href="#products"><button className="btn btn-primary bg-white border-0 rounded-4xl text-purple-600">Shop now</button></a>
                     </div>
                     <div className="absolute w-10/12 md:w-8/12 lg:w-7/12 mx-auto 
                     left-1/2 transform -translate-x-1/2 -bottom-28 lg:-bottom-[18rem] 
