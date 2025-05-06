@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { getLocalStorage } from "../../utils/utils";
 import CartProduct from "./CartProduct";
+import { AiFillDollarCircle } from "react-icons/ai";
 import { BiSortAlt2 } from "react-icons/bi";
+import { IoIosCloseCircleOutline } from "react-icons/io";
 
 
 const Cart = () => {
@@ -14,16 +16,30 @@ const Cart = () => {
 
     const [totalCartMoney, setTotalCartMoney] = useState(0);
     const [cartProducts, setCartProducts] = useState([]);
+    const [cartSortProducts, setCartSortProducts] = useState([]);
     
 
     const handleCartProducts = products => {
         const LSids = getLocalStorage();
         const cartedProducts = products.filter(product=> LSids.includes(product.product_id))//includes() expects a string when called on another string.
         setCartProducts(cartedProducts);
+        setCartSortProducts(cartedProducts);
 
         //money calc
         const totalMoney = cartedProducts.reduce((sum, product) => sum + product.price, 0);//sum: starts at 0 (the initial value).
         setTotalCartMoney(totalMoney);
+    }
+
+    const handleSort =  sortType  => {
+        if (sortType==='no') {
+            setCartSortProducts(cartProducts);
+        } else if (sortType==='price'){
+            const priceSort = [...cartProducts].sort((a, b) => b.price - a.price)
+            setCartSortProducts(priceSort)
+        } else {
+            const ratingSort = [...cartProducts].sort((a, b) => b.rating - a.rating)
+            setCartSortProducts(ratingSort)
+        }
     }
 
     return (
@@ -38,14 +54,32 @@ const Cart = () => {
                     currency: 'USD'
                 }).format(totalCartMoney)}
                 </h2>
-                    <button className="font-semibold border-2 border-purple-600 text-purple-600
-                    flex items-center gap-1 px-4 py-1 rounded-full">Sort by Price <BiSortAlt2 /></button>
-                    <button className="text-lg bg-purple-600 text-white px-4 py-1.5 rounded-full">Purchase</button>
+                    {/* <button className="font-semibold border-2 border-purple-600 text-purple-600
+                    flex items-center gap-1 px-4 py-1 rounded-full cursor-pointer">Sort by Price <BiSortAlt2 /></button> */}
+
+                    <div className="dropdown dropdown-center">
+                        <div tabIndex={0} role="button" className=" font-semibold border-2 border-purple-600 text-purple-600
+                        flex items-center gap-1 
+                    px-4 py-2 rounded-full cursor-pointer">Sort <BiSortAlt2 /></div>
+                        <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                            <button 
+                            onClick={()=> handleSort('price')}
+                            className="bg-gray-100 rounded-2xl py-1 cursor-pointer text-purple-600 my-1 font-semibold flex items-center gap-2 justify-center">by Price <span className="text-lg text-yellow-500"><AiFillDollarCircle /></span></button>
+                            <button 
+                            onClick={()=> handleSort('rating')}
+                            className="bg-gray-100 rounded-2xl py-1 cursor-pointer text-purple-600 my-1 font-semibold">by Rating ⭐</button>
+                            <button 
+                            onClick={()=> handleSort('no')}
+                            className="bg-gray-100 rounded-2xl py-1 cursor-pointer text-purple-600 my-1 font-semibold flex items-center gap-2 justify-center">No sort <span className="text-lg text-yellow-700 bg"><IoIosCloseCircleOutline /></span></button>
+                        </ul>
+                    </div>
+
+                    <button className=" bg-purple-600 text-white px-4 py-2 cursor-pointer rounded-full">Purchase</button>
                 </div>
             </div>
             <div className="flex flex-col items-start gap-2">
                 {
-                    cartProducts.map(product=> <CartProduct key={product.product_id} product={product}></CartProduct>)
+                    cartSortProducts.map(product=> <CartProduct key={product.product_id} product={product}></CartProduct>)
                 }
             </div>
         </div>

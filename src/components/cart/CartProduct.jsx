@@ -2,7 +2,7 @@ import { RxCrossCircled } from "react-icons/rx";
 
 const CartProduct = ({product}) => {
 
-    const {product_title, product_image, description, price} = product;
+    const {product_title, product_image, description, price, rating} = product;
 
     return (
         <div className="bg-base-300 w-full px-6 py-4 rounded-2xl">
@@ -16,7 +16,10 @@ const CartProduct = ({product}) => {
                     <div className="flex flex-col gap-2">
                         <h2 className="text-2xl font-semibold">{product_title}</h2>
                         <p className="text-gray-500">{description}</p>
-                        <p className="font-semibold">Price: {price}</p>
+                        <div className="flex items-center gap-2">
+                            <p className="font-semibold">Price: {price}</p>
+                            <p className="font-semibold">Rating: {rating}</p>
+                        </div>
                 </div>
             </div>
             <button className="text-2xl text-red-600 cursor-pointer"><RxCrossCircled /></button>
