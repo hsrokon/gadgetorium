@@ -55,11 +55,11 @@ const Cart = () => {
 
     return (
         <div className="w-10/12 mx-auto mt-8">
-            <div className="flex justify-between items-center my-4">
-                <h2 className="font-bold text-2xl">Cart</h2>
-                <div className="flex gap-6 ">
+            <div className="flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-center my-8 md:my-4">
+                <h2 className="font-bold text-xl md:text-2xl">Cart</h2>
+                <div className="flex border-y md:border-0 border-purple-300 py-4 md:py-0 gap-2 md:gap-4 lg:gap-6 ">
                     {/* formatting */}
-                <h2 className="text-xl font-bold">
+                <h2 className="text-sm md:text-lg lg:text-xl font-bold">
                 Total cost: {new Intl.NumberFormat('en-US', {
                     style: 'currency',
                     currency: 'USD'
@@ -67,8 +67,8 @@ const Cart = () => {
                 </h2>
                     <div className="dropdown dropdown-center">
                         <div tabIndex={0} role="button" className=" font-semibold border-2 border-purple-600 text-purple-600
-                        flex items-center gap-1 
-                    px-4 py-2 rounded-full cursor-pointer">Sort <BiSortAlt2 /></div>
+                        flex items-center gap-0.5 md:gap-1 
+                    px-1.5 py-2 text-sm md:text-base md:px-3 md:py-1 lg:px-4 lg:py-2 rounded-full cursor-pointer">Sort <BiSortAlt2 /></div>
                         <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
                             <button 
                             onClick={()=> handleSort('price')}
@@ -82,7 +82,7 @@ const Cart = () => {
                         </ul>
                     </div>
 
-                    <button className=" bg-purple-600 text-white px-4 py-2 cursor-pointer rounded-full">Purchase</button>
+                    <button className=" bg-purple-600 text-white px-2 md:px-3 md:py-1 lg:px-4 lg:py-2 text-xs md:text-base cursor-pointer rounded-full">Purchase</button>
                 </div>
             </div>
             <div className="flex flex-col items-start gap-2">
