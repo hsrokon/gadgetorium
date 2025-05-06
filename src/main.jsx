@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './components/layout/Layout.jsx'
 import Home from './components/home/Home.jsx'
 import DetailsProduct from './components/detailsProduct/DetailsProduct.jsx'
+import Dashboard from './components/dashboard/Dashboard.jsx'
 
 
 const router = createBrowserRouter([
@@ -20,10 +21,16 @@ const router = createBrowserRouter([
         path: '/products/:productId',
         element: <DetailsProduct></DetailsProduct>,
         loader: ()=> fetch('/data.json')
+      },
+      {
+        path: '/dashboard',
+        element: <Dashboard></Dashboard>
       }
     ]
   }
 ])
+
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

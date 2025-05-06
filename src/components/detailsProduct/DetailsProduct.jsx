@@ -1,26 +1,34 @@
 import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
-    import { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
+import { setLocalStorage } from "../../utils/utils";
+
 
 const DetailsProduct = () => {
 
     const data = useLoaderData();    
-    const navigate = useNavigate() 
     const {productId} = useParams()
+    const navigate = useNavigate(); 
+
     
     const specificData = data.find(product=> product.product_id===productId)
-    const {product_title, product_image, price, description, specification, availability, rating} = specificData;
+    const {product_id, product_title, product_image, price, description, specification, availability, rating} = specificData;
     
     const handleGoBack = ()=> {
         navigate(-1);
     }
+
       
     //scroll to details fixed
     const detailsRef = useRef(null);  
     useEffect(()=> {
         detailsRef.current?.scrollIntoView({behavior: "smooth"});
     }, []);
+
+    const handleSaveLS = id => {
+        setLocalStorage(id);
+    }
 
 
     return (
@@ -66,9 +74,15 @@ const DetailsProduct = () => {
                             </div>
                         </div>
                             <div className="flex gap-1">
-                                <button className="btn btn-primary bg-purple-600 border-0 rounded-full text-xs lg:text-sm">Add to cart 
-                                    <span className="text-xl"><IoCartOutline /></span></button>
-                                <button className="btn btn-primary bg-purple-600 border-0 rounded-full"><FaRegHeart /></button>
+                                <button 
+                                onClick={()=> handleSaveLS(product_id)}
+                                className="btn btn-primary bg-purple-600 border-0 rounded-full text-xs lg:text-sm">Add to cart <span className="text-xl"><IoCartOutline /></span>
+                                </button>
+                                
+                                <button 
+                                className="btn btn-primary bg-purple-600 border-0 rounded-full">
+                                <FaRegHeart /></button>
+
                             </div>
                             <button 
                             className="btn btn-primary bg-purple-600 border-0 rounded-full w-fit text-xs lg:text-sm"

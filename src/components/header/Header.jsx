@@ -9,9 +9,9 @@ const Header = () => {
     const location = useLocation();
 
     const links = <>
-        <li><NavLink>Home</NavLink></li>
-        <li><NavLink>Statistics</NavLink></li>
-        <li><NavLink>Dashboard</NavLink></li>
+        <li><NavLink to={'/'}>Home</NavLink></li>
+        <li><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
+        <li><NavLink to={'/statistics'}>Statistics</NavLink></li>
     </> 
 
     return (
@@ -35,8 +35,8 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end flex gap-4 mr-4">
-                <Link className="text-2xl"><IoCartOutline /></Link>
-                <Link className=""><FaRegHeart /></Link>
+                <Link to={'/dashboard'} className="text-2xl"><IoCartOutline /></Link>
+                <Link to={'/dashboard'} className=""><FaRegHeart /></Link>
             </div>
         </div>
     );

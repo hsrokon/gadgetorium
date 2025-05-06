@@ -82,7 +82,7 @@ const Gadgets = () => {
                             {['All', 'Smartphones', 'Laptops', 'Tablets', 'Audio', 'Wearables', 'Drones', 'Accessories', 'VR']
                             .map(category => <button
                             className="py-2 rounded-2xl btn btn-neutral btn-outline 
-                            bg-purple-600 text-white border-white lg:text-black lg:bg-base-100 hover:bg-purple-600 lg:border-purple-600"
+                            bg-purple-600 text-white border-white lg:text-black hover:text-white lg:bg-base-100 hover:bg-purple-600 lg:border-purple-600"
                             onClick={()=> handleCategoryRender(`${category}`)}
                             >{category}</button>)
                             }
