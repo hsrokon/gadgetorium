@@ -4,6 +4,8 @@ import CartProduct from "./CartProduct";
 import { AiFillDollarCircle } from "react-icons/ai";
 import { BiSortAlt2 } from "react-icons/bi";
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import { BiCartAdd } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 
 const Cart = () => {
@@ -63,9 +65,6 @@ const Cart = () => {
                     currency: 'USD'
                 }).format(totalCartMoney)}
                 </h2>
-                    {/* <button className="font-semibold border-2 border-purple-600 text-purple-600
-                    flex items-center gap-1 px-4 py-1 rounded-full cursor-pointer">Sort by Price <BiSortAlt2 /></button> */}
-
                     <div className="dropdown dropdown-center">
                         <div tabIndex={0} role="button" className=" font-semibold border-2 border-purple-600 text-purple-600
                         flex items-center gap-1 
@@ -93,6 +92,18 @@ const Cart = () => {
                         product={product}
                         handleDeleteCartProduct={handleDeleteCartProduct}></CartProduct>)
                 }
+            </div>
+            <div className="flex flex-col items-center mt-6">
+                {cartProducts.length=== 0 && (<div>
+                    <div className="flex flex-col items-center gap-2">
+                        <h2 className="text-4xl font-bold">No products added to cart</h2>
+                        <p className="text-sm font-semibold">Click on cart to add product...</p>
+                        <Link to={{pathname: '/', hash: '#products'}} state={{fromCart: true}}>
+                        {/* fromCart: true is important to check if I'm from empty cart */}
+                            <button className="text-9xl cursor-pointer"><BiCartAdd /></button>
+                        </Link>
+                    </div>
+                </div>)}
             </div>
         </div>
     );

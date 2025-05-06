@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Gadget from "./Gadget";
+import { useLocation } from "react-router-dom";
 
 
 const Gadgets = () => {
@@ -35,9 +36,18 @@ const Gadgets = () => {
         }
     }
 
+    //redirecting to products when I'm from empty cart
+    const location = useLocation();
+    const productsRef = useRef(null);
+    useEffect(()=> {
+        if (location.state?.fromCart) {
+            productsRef.current?.scrollIntoView({behavior: 'smooth'})
+        }
+    },[location])
+
 
     return (
-        <div id="products" className="mt-36 lg:mt-96">
+        <div ref={productsRef} id="products" className="mt-36 lg:mt-96">
             <div className="flex w-full flex-col">
                 <div className="divider text-xs md:text-xl lg:text-4xl font-semibold mt-6 mb-2 lg:my-14 
                   before:bg-purple-600 after:bg-purple-600 

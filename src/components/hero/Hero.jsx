@@ -2,7 +2,6 @@
 
 const Hero = () => {
     return (
-        // <div className="">
             <div className="hero bg-purple-600 pt-6 lg:pt-20 pb-28 md:pb-36 lg:pb-44 rounded-b-2xl relative">
                 <div className="hero-content text-center text-white">
                     <div className="max-w-3xl">
@@ -20,8 +19,6 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-        // </div>
-        
     );
 };
 
