@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
 import { useLocation } from 'react-router-dom';
+import './header.css'
 
 
 const Header = () => {
@@ -9,7 +10,11 @@ const Header = () => {
     const location = useLocation();
 
     const links = <>
-        <li><NavLink to={'/'}>Home</NavLink></li>
+        <li><NavLink to={'/'}
+        className={({isActive}) => `${isActive ?  'active-white' : ''}`}
+        >Home</NavLink></li>
+        {/* React Router passes an object to this function — we destructure it to get isActive (true if link matches current route) 
+        It gives you isActive (a boolean) — true if this link matches the current route*/}
         <li><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
         <li><NavLink to={'/statistics'}>Statistics</NavLink></li>
     </> 
