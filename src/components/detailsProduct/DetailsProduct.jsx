@@ -2,7 +2,8 @@ import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
 import { useEffect, useRef } from "react";
-import { setLocalStorage } from "../../utils/utils";
+import { setLocalStorage } from "../../utils/forCart";
+import { setLocalStorageWL } from "../../utils/forWishlist";
 
 
 const DetailsProduct = () => {
@@ -26,8 +27,12 @@ const DetailsProduct = () => {
         detailsRef.current?.scrollIntoView({behavior: "smooth"});
     }, []);
 
-    const handleSaveLS = id => {
+    const handleSaveCartToLS = id => {
         setLocalStorage(id);
+    }
+
+    const handleSaveWLtoLS = id => {
+        setLocalStorageWL(id)
     }
 
 
@@ -75,11 +80,12 @@ const DetailsProduct = () => {
                         </div>
                             <div className="flex gap-1">
                                 <button 
-                                onClick={()=> handleSaveLS(product_id)}
+                                onClick={()=> handleSaveCartToLS(product_id)}
                                 className="btn btn-primary bg-purple-600 border-0 rounded-full text-xs lg:text-sm">Add to cart <span className="text-xl"><IoCartOutline /></span>
                                 </button>
                                 
                                 <button 
+                                onClick={()=> handleSaveWLtoLS(product_id)}
                                 className="btn btn-primary bg-purple-600 border-0 rounded-full">
                                 <FaRegHeart /></button>
 

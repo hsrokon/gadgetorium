@@ -24,7 +24,7 @@ const removeFromLS = id => {
     const LSids = getLocalStorage();
     const newIds = LSids.filter(idx => idx!==id);
     const newIdsStr = JSON.stringify(newIds);
-    localStorage.clear();
+    localStorage.removeItem('gadget-cart');//only clears gadget cart 
     localStorage.setItem('gadget-cart', newIdsStr)
 }
 

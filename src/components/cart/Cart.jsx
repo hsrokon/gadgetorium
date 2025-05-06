@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getLocalStorage, removeFromLS } from "../../utils/utils";
+import { getLocalStorage, removeFromLS } from "../../utils/forCart";
 import CartProduct from "./CartProduct";
 import { AiFillDollarCircle } from "react-icons/ai";
 import { BiSortAlt2 } from "react-icons/bi";
@@ -97,10 +97,10 @@ const Cart = () => {
                 {cartProducts.length=== 0 && (<div>
                     <div className="flex flex-col items-center gap-2">
                         <h2 className="text-4xl font-bold">No products added to cart</h2>
-                        <p className="text-sm font-semibold">Click on cart to add product...</p>
+                        <p className="text-sm font-semibold flex items-center gap-2">Click on <BiCartAdd className="text-purple-600 text-lg"/> to add product...</p>
                         <Link to={{pathname: '/', hash: '#products'}} state={{fromCart: true}}>
                         {/* fromCart: true is important to check if I'm from empty cart */}
-                            <button className="text-9xl cursor-pointer"><BiCartAdd /></button>
+                            <button className="text-9xl cursor-pointer"><BiCartAdd className="text-purple-600"/></button>
                         </Link>
                     </div>
                 </div>)}
