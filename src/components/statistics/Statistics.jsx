@@ -5,6 +5,8 @@ import {
 import { ResponsiveContainer } from "recharts"; 
 import { scaleOrdinal } from "d3-scale";
 import { schemeCategory10 } from "d3-scale-chromatic";
+import { Tooltip } from 'recharts';
+
 
 const colors = scaleOrdinal(schemeCategory10).range();
 
@@ -66,6 +68,7 @@ const Statistics = () => {
                 height={100}
                 />
                 <YAxis />
+                <Tooltip />
                 <Bar
                 dataKey="price"
                 shape={<TriangleBar />}
