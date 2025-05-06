@@ -20,4 +20,12 @@ const setLocalStorage = id => {
     }
 }
 
-export {getLocalStorage, setLocalStorage};
+const removeFromLS = id => {
+    const LSids = getLocalStorage();
+    const newIds = LSids.filter(idx => idx!==id);
+    const newIdsStr = JSON.stringify(newIds);
+    localStorage.clear();
+    localStorage.setItem('gadget-cart', newIdsStr)
+}
+
+export {getLocalStorage, setLocalStorage, removeFromLS};

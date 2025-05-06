@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getLocalStorage } from "../../utils/utils";
+import { getLocalStorage, removeFromLS } from "../../utils/utils";
 import CartProduct from "./CartProduct";
 import { AiFillDollarCircle } from "react-icons/ai";
 import { BiSortAlt2 } from "react-icons/bi";
@@ -24,11 +24,12 @@ const Cart = () => {
         const cartedProducts = products.filter(product=> LSids.includes(product.product_id))//includes() expects a string when called on another string.
         setCartProducts(cartedProducts);
         setCartSortProducts(cartedProducts);
-
-        //money calc
-        const totalMoney = cartedProducts.reduce((sum, product) => sum + product.price, 0);//sum: starts at 0 (the initial value).
-        setTotalCartMoney(totalMoney);
     }
+
+    useEffect(()=> {
+        const totalMoney = cartProducts.reduce((sum, product) => sum + product.price, 0);//sum: starts at 0 (the initial value).
+        setTotalCartMoney(totalMoney);
+    } ,[cartProducts])
 
     const handleSort =  sortType  => {
         if (sortType==='no') {
@@ -40,6 +41,14 @@ const Cart = () => {
             const ratingSort = [...cartProducts].sort((a, b) => b.rating - a.rating)
             setCartSortProducts(ratingSort)
         }
+    }
+
+    const handleDeleteCartProduct = id => {
+        removeFromLS(id)
+        const updatedCartLS = getLocalStorage();
+        const updatedCart = cartProducts.filter(product=> updatedCartLS.includes(product.product_id))
+        setCartProducts(updatedCart);
+        setCartSortProducts(updatedCart);
     }
 
     return (
@@ -79,7 +88,10 @@ const Cart = () => {
             </div>
             <div className="flex flex-col items-start gap-2">
                 {
-                    cartSortProducts.map(product=> <CartProduct key={product.product_id} product={product}></CartProduct>)
+                    cartSortProducts.map(product=> <CartProduct 
+                        key={product.product_id} 
+                        product={product}
+                        handleDeleteCartProduct={handleDeleteCartProduct}></CartProduct>)
                 }
             </div>
         </div>
