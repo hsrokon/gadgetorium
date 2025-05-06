@@ -9,6 +9,7 @@ import Dashboard from './components/dashboard/Dashboard.jsx'
 import ErrorPage from './components/error/ErrorPage.jsx'
 
 
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -38,4 +39,5 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router}></RouterProvider>
   </StrictMode>,
+
 )

@@ -20,6 +20,9 @@ const DetailsProduct = () => {
         navigate(-1);
     }
 
+    const handleGoToCart =()=> {
+        navigate('/dashboard')
+    }
       
     //scroll to details fixed
     const detailsRef = useRef(null);  
@@ -29,10 +32,12 @@ const DetailsProduct = () => {
 
     const handleSaveCartToLS = id => {
         setLocalStorage(id);
+        
     }
 
     const handleSaveWLtoLS = id => {
         setLocalStorageWL(id)
+        
     }
 
 
@@ -90,10 +95,17 @@ const DetailsProduct = () => {
                                 <FaRegHeart /></button>
 
                             </div>
-                            <button 
-                            className="btn btn-primary bg-purple-600 border-0 rounded-full w-fit text-xs lg:text-sm"
-                            onClick={handleGoBack}
-                            >Go back to products</button>
+                            <div className="flex items-center gap-1">
+                                <button 
+                                className="btn btn-primary bg-purple-600 border-0 rounded-full w-fit text-xs lg:text-sm"
+                                onClick={handleGoBack}
+                                >Go back to products</button>
+                                <button 
+                                className="btn btn-primary bg-purple-600 border-0 rounded-full w-fit text-xs lg:text-sm"
+                                onClick={handleGoToCart}
+                                >Go to <IoCartOutline className="text-xl"/></button>
+                            </div>
+                            
                     </div>
                 </div>
             </div>
