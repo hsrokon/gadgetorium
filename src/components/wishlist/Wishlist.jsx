@@ -58,6 +58,15 @@ const Wishlist = () => {
                     </div>
                 </div>)}
             </div>
+            <div className="flex justify-center">
+                {
+                    WListedProducts.length!==0 && (
+                        <Link to={{pathname: '/', hash: '#products'}} state={{fromCart: true}}><button 
+                    className="btn btn-primary bg-purple-600 border-0 rounded-full w-fit text-xs lg:text-sm">
+                        Go to products
+                    </button></Link>)
+                }
+            </div>
         </div>
     );
 };
