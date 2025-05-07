@@ -7,7 +7,7 @@ Welcome to **Gadgetorium**, your ultimate destination for the latest and greates
 👉 [https://gadgetorium.surge.sh](https://gadgetorium.surge.sh)
 
 ## 📄 Requirement Document  
-📎 [Gadgetorium req PDF](./gadgetorium-req-doc)
+📎 [Gadgetorium req PDF](./gadgetorium-req-doc.pdf)
 
 ---
 
@@ -76,4 +76,4 @@ Welcome to **Gadgetorium**, your ultimate destination for the latest and greates
 
 ---
 
-Feel free to clone, explore, and enhance this project for your learning or portfolio. If you'd like a dark mode, search functionality, or Stripe integration — it's ready for expansion!
+This project is designed with scalability and customization in mind — ideal for clients seeking a sleek, modern gadget storefront. With features like category filtering, dynamic statistics, and responsive design, it can be tailored further for real-world deployment or commercial use
