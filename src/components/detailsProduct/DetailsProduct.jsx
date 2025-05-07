@@ -4,6 +4,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { useEffect, useRef } from "react";
 import { setLocalStorage } from "../../utils/forCart";
 import { setLocalStorageWL } from "../../utils/forWishlist";
+import { Helmet } from "react-helmet-async";
 
 
 const DetailsProduct = () => {
@@ -43,6 +44,9 @@ const DetailsProduct = () => {
 
     return (
         <div className="relative mb-[35rem] lg:mb-[25rem]">
+            <Helmet>
+                <title>Product details | {product_id}</title>
+            </Helmet>
             <div className="bg-purple-600 text-white text-center pt-8 pb-30 lg:pb-56">
                 <h2 className="text-3xl font-bold py-3">Products Details</h2>
                 <p className="text-xs md:text-sm w-11/12 md:w-9/12 lg:w-7/12 mx-auto">Discover everything you need to know about your next favorite gadget — from detailed specifications and features to pricing and availability. Make confident choices with all the insights in one place </p>

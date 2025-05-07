@@ -8,6 +8,7 @@ import DetailsProduct from './components/detailsProduct/DetailsProduct.jsx'
 import Dashboard from './components/dashboard/Dashboard.jsx'
 import ErrorPage from './components/error/ErrorPage.jsx'
 import Statistics from './components/statistics/Statistics.jsx'
+import { HelmetProvider } from 'react-helmet-async'
 
 
 
@@ -41,8 +42,9 @@ const router = createBrowserRouter([
 
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
-  </StrictMode>,
-
+  <HelmetProvider>
+    <StrictMode>
+      <RouterProvider router={router}></RouterProvider>
+    </StrictMode>,
+  </HelmetProvider>
 )

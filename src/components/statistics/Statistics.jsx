@@ -6,6 +6,7 @@ import { ResponsiveContainer } from "recharts";
 import { scaleOrdinal } from "d3-scale";
 import { schemeCategory10 } from "d3-scale-chromatic";
 import { Tooltip } from 'recharts';
+import { Helmet } from "react-helmet-async";
 
 
 const colors = scaleOrdinal(schemeCategory10).range();
@@ -41,6 +42,10 @@ const Statistics = () => {
 
   return (
     <div>
+      <Helmet>
+          <title>Gadgetorium | Statistics</title>
+          <meta name="description" content="View statistical data of product prices." />
+      </Helmet>
       <div className="bg-purple-600 text-white text-center py-9 flex flex-col gap-4">
         <h2 className="text-3xl font-bold">Statistics</h2>
         <p className="text-xs md:text-sm w-11/12 md:w-9/12 lg:w-7/12 mx-auto">
